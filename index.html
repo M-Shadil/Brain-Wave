@@ -1,11 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BrainWave — Gallery</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">BrainWave</h1>
+      <p class="tagline">A visual gallery for BrainWave — exploring imagery and ideas.</p>
+    </div>
+  </header>
+
+  <main class="container" id="main">
+    <section aria-labelledby="gallery-heading" class="gallery-section">
+      <h2 id="gallery-heading">BrainWave Gallery</h2>
+      <p class="lead">Click any image to open the viewer. Use ← → or Esc to navigate/close.</p>
+
+      <div class="gallery" id="gallery" role="list">
+        <!-- Thumbnails: change or extend the list as needed -->
+        <figure class="gallery-item" role="listitem">
+          <button class="thumb-btn" data-index="0" aria-label="Open image 1 - Brainwave interface">
+            <img src="https://picsum.photos/id/1015/600/400" alt="Abstract blue network visualization">
+            <figcaption>Network Visualization</figcaption>
+          </button>
+        </figure>
+
+        <figure class="gallery-item" role="listitem">
+          <button class="thumb-btn" data-index="1" aria-label="Open image 2 - Brainwave research">
+            <img src="https://picsum.photos/id/1025/600/400" alt="Close-up of electrodes and circuitry">
+            <figcaption>Electrodes & Circuitry</figcaption>
+          </button>
+        </figure>
+
+        <figure class="gallery-item" role="listitem">
+          <button class="thumb-btn" data-index="2" aria-label="Open image 3 - Brainwave analytics">
+            <img src="https://picsum.photos/id/1033/600/400" alt="Colorful brainwave patterns on a dark background">
+            <figcaption>Brainwave Patterns</figcaption>
+          </button>
+        </figure>
+
+        <figure class="gallery-item" role="listitem">
+          <button class="thumb-btn" data-index="3" aria-label="Open image 4 - Team collaboration">
+            <img src="https://picsum.photos/id/1040/600/400" alt="Team collaborating around a screen showing charts">
+            <figcaption>Team Collaboration</figcaption>
+          </button>
+        </figure>
+
+        <figure class="gallery-item" role="listitem">
+          <button class="thumb-btn" data-index="4" aria-label="Open image 5 - Medical visualization">
+            <img src="https://picsum.photos/id/1052/600/400" alt="Medical data visualization representing brain scans">
+            <figcaption>Medical Visualization</figcaption>
+          </button>
+        </figure>
+
+        <figure class="gallery-item" role="listitem">
+          <button class="thumb-btn" data-index="5" aria-label="Open image 6 - Research lab">
+            <img src="https://picsum.photos/id/1060/600/400" alt="Research lab equipment with a soft bokeh">
+            <figcaption>Research Lab</figcaption>
+          </button>
+        </figure>
+
+        <figure class="gallery-item" role="listitem">
+          <button class="thumb-btn" data-index="6" aria-label="Open image 7 - Data streaming">
+            <img src="https://picsum.photos/id/1067/600/400" alt="Abstract streaming data visualization in neon colors">
+            <figcaption>Data Streaming</figcaption>
+          </button>
+        </figure>
+
+        <figure class="gallery-item" role="listitem">
+          <button class="thumb-btn" data-index="7" aria-label="Open image 8 - Creative concept">
+            <img src="https://picsum.photos/id/1074/600/400" alt="Creative concept art representing connections">
+            <figcaption>Creative Concept</figcaption>
+          </button>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal / Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image viewer">
+    <div class="lightbox-content">
+      <button class="lightbox-close" aria-label="Close viewer">&times;</button>
+      <button class="lightbox-prev" aria-label="Previous image" title="Previous">&#10094;</button>
+      <div class="lightbox-viewport">
+        <img id="lightbox-img" src="" alt="">
+        <p id="lightbox-caption" class="lightbox-caption"></p>
+      </div>
+      <button class="lightbox-next" aria-label="Next image" title="Next">&#10095;</button>
+    </div>
+    <div class="lightbox-backdrop" tabindex="-1" aria-hidden="true"></div>
+  </div>
+
+  <footer class="site-footer container">
+    <p>© <strong>BrainWave</strong> — Visual Gallery</p>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
