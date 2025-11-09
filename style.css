@@ -7,6 +7,16 @@
 .navbar .logo{
     width: 150px;
 }
+.logo-link{
+    display: inline-block;
+    line-height: 0;
+}
+.navbar-menu li a{
+    text-decoration: none;
+    color: inherit;
+    padding: 6px 4px;
+    display: inline-block;
+}
 .navbar-menu{
     display: flex;
     list-style: none;
@@ -85,7 +95,7 @@
     color: tomato;
 }
 @media (max-width:1050px){
-    .navbar.logo{
+    .navbar .logo{
         width: 140px;
     }
     .navbar-menu{
@@ -103,7 +113,7 @@
     }
 }
 @media (max-width:900px){
-    .navbar.logo{
+    .navbar .logo{
         width: 140px;
     }
     .navbar-menu{
